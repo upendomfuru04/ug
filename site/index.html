@@ -5,72 +5,88 @@
 	<meta name="viewpoirt" content="width=device-width,intial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ieedge">
 	<title>gastonngailo</title>
-	
+	<link rel="stylesheet" type="text/css" href="css/style.css"/>
+   <link rel="shortcut icone" href="image/fav-icon.png">
+  <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.no-icons.min.css" rel="stylesheet">
+  <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
 </head>
 <body>
 	<style>
 		 @import url('https://fonts.googleapis.com/css?family=poppins:400,500,600,700&display=swap');
-		*{
+		body{
 			margin: 0;
 			padding: 0;
-			box-sizing: border-box;
-			font-family: 'poppins' sans-serif;
+			font-family: sans-serif;
 		}
-		body{
-			background-image:;
-			background-repeat: no-repeat;
-			background-position: center;
-			background-size: cover;
-			min-height: 100vh;
-			position: relative;
-		}
-		nav{
-			display: flex;
-			height: 30px;
+		section{
+			position:relative;
 			width: 100%;
-			background: #000;
-			align-items: center;
-			justify-content: space-between;
-			padding: 10px 50px 60px;
-			flex-wrap: wrap;
+			height: 100vh;
+			background: url(transparent.png);
+			background-attachment: fixed;
+			background-position: center center;
+	    }
+		header{
+			padding: 0 100px;
+			width: 100%;
+			height: 80px;
+			box-sizing: border-box;
+			background: rgba(255,255,255,.2);
+			box-shadow: 0 5px 15px rgba(0,0,0,.2);
+			transition: .5s;
+			
 		}
-		nav .logo{
-			color: #fff;
-			font-size: 35px;
-			font-weight: 600;
+		header .logo{
+			color: black;
+			height: 50px;
+			line-height: 50px;
+			font-size: 40px;
+			float: left;
+			font-weight: bold;
 		}
-		nav ul{
+		header nav{
+			float: right;
+
+		}
+		header nav ul{
+			position: relative;
+			margin: 0;
+			padding: 0;
 			display: flex;
-			flex-wrap: wrap;
-			list-style-type: none;
+			float: right;
+			transition: .5s;
 		}
-		nav ul li{
-			margin: 2 3px;
+		header nav ul li{
+			list-style: none;
 		}
-		nav ul li a{
-			color: #f2f2f2;
+		header nav ul li a{
+			position: relative;
+			height: 50px;
+			line-height: 50px;
+			display: block;
+			padding: 0 20px;
+			margin: 2px 0;
+			text-transform: uppercase;
 			text-decoration: none;
-			font-size: 18px;
-			font-weight: 500;
-			padding: 9px 15px;
-			border-radius: 5px;
-			letter-spacing: 1px;
-			border-bottom: 1.5px solid transparent;
-			transition: all 0.3s ease;
+			color: #262626;
+			font-weight: bold;
+			transition: .5s;
 		}
-		nav ul li a:hover{
-			border-color: orange;
-			color: orange;
-		}
-		nav .menu-btn i{
+		header nav ul li a:hover{
+			background: #000;
 			color: #fff;
-			font-size: 22px;
+		}
+		.menu-toggle{
+			color: #fff;
+			float: right;
+			line-height: 50px;
+			font-size: 24px;
 			cursor: pointer;
 			display: none;
 		}
-		input[type="checkbox"]{
-			display: none;
-		}
+		
+
+
 		.content{
 			position: absolute;
 			top: 50%;
@@ -283,60 +299,236 @@
 			background-color:orange;
 			border-color:black; 
 		}
-		#footer{
-			font-family: 'Opean sans' sans-serif;
-			box-sizing: border-box;
-			width: 100%;
-			top: 50%;
-			min-height: 50vh;
-			background-color:#262c34;
-			overflow: hidden;
+		.cube-wrapper {
+    position: relative;
+    height: 200px;
+    width: 200px;
+    margin: 100px;
+    perspective: 1000px;
+}
+.cube {
+    position: relative;
+    width: 200px;
+    transform-style: preserve-3d;
+    transform-origin: 100px 100px;
+}
+.cube-top {
+  -webkit-transform: translate3d(0, -100px, 0) rotateX(90deg);
+          transform: translate3d(0, -100px, 0) rotateX(90deg);
+}
+.cube-bottom {
+  -webkit-transform: translate3d(0, 100px, 0) rotateX(90deg);
+          transform: translate3d(0, 100px, 0) rotateX(90deg);
+}
+.cube-left {
+  -webkit-transform: translate3d(-100px, 0, 0) rotateY(90deg);
+          transform: translate3d(-100px, 0, 0) rotateY(90deg);
+}
+.cube-right {
+  -webkit-transform: translate3d(100px, 0, 0) rotateY(-90deg);
+          transform: translate3d(100px, 0, 0) rotateY(-90deg);
+}
+.cube-front {
+  -webkit-transform: translate3d(0, 0, 100px) rotateY(0);
+          transform: translate3d(0, 0, 100px) rotateY(0);
+}
+.cube-back {
+  -webkit-transform: translate3d(0, 0, -100px) rotateY(-180deg);
+          transform: translate3d(0, 0, -100px) rotateY(-180deg);
+}
+.cube.is-opened {
+    animation: none;
+    opacity: 1;
+    transform: translate3d(0, 0, 0) rotateY(0deg) rotateX(0deg) !important;
+}
 
-		}
-		#footer .footer-w{
-			padding: 0 50px;
-			display: grid;
-			grid-template-columns: 25% 25% 25% 25%;
-		}
-
-		.img{
-			margin-top: 50px;
-
-		}
-		.m-left, .m-right, .s-icons{
-			margin-top: 50px;
-			
-		}
-		.s-icons{
-			margin-bottom: 50px;
-		}
-		.m-left h2,  .m-right h2, .s-icons h2{
-			margin-bottom: 20px;
-			color: white;
-		}
-		.s-box span i{
-			font-size: 20px;
-		}
-		.s-icons .s-box span{
-			padding: 20px;
-			background-color: grey;
-		}
+.cube.is-opened .cube-top {
+    transform: translate3d(-550px, 0, 0) rotateX(0);
+}
+.cube.is-opened .cube-bottom {
+    transform: translate3d(-550px, 0, 0) rotateX(0);
+}
+.cube.is-opened .cube-left {
+    transform: translate3d(-330px, 0, 0) rotateY(0);
+}
+.cube.is-opened .cube-right {
+    transform: translate3d(330px, 0, 0) rotateY(0);
+}
+.cube.is-opened .cube-front {
+    transform: translate3d(110px, 0, 0) rotateY(0);
+}
+.cube.is-opened .cube-back {
+    transform: translate3d(-110px, 0, 0) rotateY(0);
+}
 
 
 
 
 
 
-
-
-
-
-
-
-
-
-
-
+		.site-footer
+{
+  background-color:#26272b;
+  padding:45px 0 20px;
+  font-size:15px;
+  line-height:24px;
+  color:#737373;
+}
+.site-footer hr
+{
+  border-top-color:#bbb;
+  opacity:0.5
+}
+.site-footer hr.small
+{
+  margin:20px 0
+}
+.site-footer h6
+{
+  color:#fff;
+  font-size:16px;
+  text-transform:uppercase;
+  margin-top:5px;
+  letter-spacing:2px
+}
+.site-footer a
+{
+  color:#737373;
+}
+.site-footer a:hover
+{
+  color:#3366cc;
+  text-decoration:none;
+}
+.footer-links
+{
+  padding-left:0;
+  list-style:none
+}
+.footer-links li
+{
+  display:block
+}
+.footer-links a
+{
+  color:#737373
+}
+.footer-links a:active,.footer-links a:focus,.footer-links a:hover
+{
+  color:#3366cc;
+  text-decoration:none;
+}
+.footer-links.inline li
+{
+  display:inline-block
+}
+.site-footer .social-icons
+{
+  text-align:right
+}
+.site-footer .social-icons a
+{
+  width:40px;
+  height:40px;
+  line-height:40px;
+  margin-left:6px;
+  margin-right:0;
+  border-radius:100%;
+  background-color:#33353d
+}
+.copyright-text
+{
+  margin:0
+}
+@media (max-width:991px)
+{
+  .site-footer [class^=col-]
+  {
+    margin-bottom:30px
+  }
+}
+@media (max-width:767px)
+{
+  .site-footer
+  {
+    padding-bottom:0
+  }
+  .site-footer .copyright-text,.site-footer .social-icons
+  {
+    text-align:center
+  }
+}
+.social-icons
+{
+  padding-left:0;
+  margin-bottom:0;
+  list-style:none
+}
+.social-icons li
+{
+  display:inline-block;
+  margin-bottom:4px
+}
+.social-icons li.title
+{
+  margin-right:15px;
+  text-transform:uppercase;
+  color:#96a2b2;
+  font-weight:700;
+  font-size:13px
+}
+.social-icons a{
+  background-color:#eceeef;
+  color:#818a91;
+  font-size:16px;
+  display:inline-block;
+  line-height:44px;
+  width:44px;
+  height:44px;
+  text-align:center;
+  margin-right:8px;
+  border-radius:100%;
+  -webkit-transition:all .2s linear;
+  -o-transition:all .2s linear;
+  transition:all .2s linear
+}
+.social-icons a:active,.social-icons a:focus,.social-icons a:hover
+{
+  color:#fff;
+  background-color:#29aafe
+}
+.social-icons.size-sm a
+{
+  line-height:34px;
+  height:34px;
+  width:34px;
+  font-size:14px
+}
+.social-icons a.facebook:hover
+{
+  background-color:#3b5998
+}
+.social-icons a.twitter:hover
+{
+  background-color:#00aced
+}
+.social-icons a.linkedin:hover
+{
+  background-color:#007bb6
+}
+.social-icons a.dribbble:hover
+{
+  background-color:#ea4c89
+}
+@media (max-width:767px)
+{
+  .social-icons li.title
+  {
+    display:block;
+    margin-right:0;
+    font-weight:600
+  }
+}
 	 @media screen and (max-width: 800px){
 	 	.contact-info{
 	 		flex-direction: column;
@@ -356,36 +548,82 @@
 	 	}
 	 }
 
+	 @media(max-width:991px){
+	 	header{
+	 		padding: 0 20px; 		
+	 	}
+	 	.menu-toggle{
+	 		display: block;
+	 	}
+	 	header nav{
+			position:absolute;
+			width: 100%;
+			height: calc(100vh-50px);
+			background: #333;
+			top: 50px;
+			left: -100%;
+			transition: 0.5s;
+
+		}
+		header nav.active{
+			left: 0;
+		}
+	 	header nav ul{
+	 		
+	 		display:block;
+	 		text-align: center;
+	 	}
+	 	header nav ul li a{
+	 		border-bottom: 1px solid rgba(0,0,0,.2);
+	 	}
+	 }
+
+
+
 		
 	</style>
-   <nav>
-   	<div class="logo">Gaston Ngailo</div>
-   	<input type="checkbox" id="click">
-   	<label for="click" class="menu-btn">
-   		<i class="fas fa-bars"></i>
-   	</label>
-   	<ul>
+
+
+
+
+
+
+
+
+
+
+
+
+    <section>
+     <header>
+     	<div class="logo">Gaston Ngailo</div>
+     	<nav>
+       <ul>
    		<li><a href="#">Home</a></li>
    		<li><a href="#">About</a></li>
    		<li><a href="#">Services</a></li>
+   		<li><a href="#">Team</a></li>
    		<li><a href="#">portifolio</a></li>
    		<li><a href="#">contact</a></li>
-   	</ul>
-   </nav>
+       </ul>
+      </nav>
+      <div class="menu-toggle"><i class="icon-align-justify" aria-hidden="true"></i></div>
+     </header>
+   </section>
    <div class="content">
  
    </div>
    <div class="contact-info">
    	<div class="card">
-   		<i class="card-icon far fa-envelope"></i>
+   		<i class="card-icon icon-envelope"></i>
    		<p>gastonngilo@gmail.com</p>
    	</div>
    	<div class="card">
-   		<i class="card-icon fas fa-phone"></i>
+   		<i class="card-icon icon-phone"></i>
    		<p>0717 568 861</p>
    	</div>
    	<div class="card">
-   		<i class="card-icon fas fa-map-marker-alt"></i>
+   		<i class="card-icon icon-map-marker"></i>
    		<p>Dar-es-salaam, Kisutu</p>
    	</div>
    </div>
@@ -447,50 +685,73 @@
 
 
 
-<footer id="footer">
-	<div class="footer-w"></div>
-	<div class="img">
-	</div>
-	<div class="m-left">
-		<h2>NEED HELP?</h2>
-		<div class="location">
-			<span><i class="fa fa-map-marker" aria-hidden="true"></i></span>
-			<span><p>kisutu street<br>Dar-es-salaam</p></span>
-		</div>
-		<div class="location">
-			<span><i class="fa fa-map-marker" aria-hidden="true"></i></span>
-			<span><p>Samora street<br>Dar-es-salaam</p></span>
-		</div>
-	</div>
-	<div class="m-right">
-		<h2>FOR CONTACT</h2>
-		<div class="contant">
-			<span>
-				<i class="fas fa-envelope"></i>
-			</span>
-			<span>
-				<p>Email <br>gastonngailo@gmail.com</p>
-			</span>
-		</div>
-		<div class="contant">
-			<span>
-				<i class="fas fa-map-marker-alt"></i>
-			</span>
-			<span>
-				<p>Phone <br>0717 568 861</p>
-			</span>
-		</div>
-	</div>
-	<div class="s-icons">
-		<h2>BE SOCIAL</h2>
-		<div class="s-box">
-			<span><i class="fab fa-facebook-f"></i></span>
-			<span><i class="fab fa-twitter"></i></span>
-			<span><i class="fab fa-instagram"></i></span>
-			<span><i class="fab fa-youtube"></i></span>
-		</div>
-	</div>
-	
+  <div class="cube-wrapper"> 
+	<div class="cube">
+        <div class="cube-top" style="background-image: url('fg.jpg')"></div>
+        <div class="cube-bottom" style="background-image: url('fg.jpg')"></div>
+        <div class="cube-left" style="background-image: url('fg.jpg')"></div>
+        <div class="cube-right" style="background-image: url('fg.jpg')"></div>
+        <div class="cube-front" style="background-image: url('fg.jpg')"></div>
+        <div class="cube-back" style="background-image: url('fg.jpg')"></div>
+    </div>
+</div>
+
+
+
+
+  <footer class="site-footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12 col-md-6">
+            <h6>About Me</h6>
+            <p class="text-justify"><i style="align-items: center;">GASTON NGAILO</i><br>"The reason why I hate being an employee and love being an entrepreneur is that, being an entrepreneur you only have one BOSS, and that is the CUSTOMER."</p>
+          </div>
+
+          <div class="col-xs-6 col-md-3">
+            <h6>Categories</h6>
+            <ul class="footer-links">
+              <li><a href="#">Home</a></li>
+   		<li><a href="#">About</a></li>
+   		<li><a href="#">Services</a></li>
+   		<li><a href="#">Team</a></li>
+   		<li><a href="#">portifolio</a></li>
+   		<li><a href="#">contact</a></li>
+            </ul>
+          </div>
+
+          <div class="col-xs-6 col-md-3">
+            <h6>Quick Links</h6>
+            <ul class="footer-links">
+              <li><a href="#">Home</a></li>
+   		<li><a href="#">About</a></li>
+   		<li><a href="#">Services</a></li>
+   		<li><a href="#">Team</a></li>
+   		<li><a href="#">portifolio</a></li>
+   		<li><a href="#">contact</a></li>
+            </ul>
+          </div>
+        </div>
+        <hr>
+      </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8 col-sm-6 col-xs-12">
+            <p class="copyright-text">Copyright &copy; 2021 All Rights Reserved by 
+         <a href="#">UpendoMyfair</a>.
+            </p>
+          </div>
+
+          <div class="col-md-4 col-sm-6 col-xs-12">
+            <ul class="social-icons">
+              <li><a class="facebook" href="#"><i class="icon-facebook"></i></a></li>
+              <li><a class="twitter" href="#"><i class="icon-twitter"></i></a></li>
+              <li><a class="dribbble" href="#"><i class="icon-dribbble"></i></a></li>
+              <li><a class="linkedin" href="#"><i class="icon-linkedin"></i></a></li>   
+            </ul>
+          </div>
+        </div>
+      </div>
+</footer>
 </footer>
 
 
@@ -514,6 +775,59 @@
 	function scrollToPrevItem() {
 		scroller.scrollBy({left:-itemWidth, top:0, behavior: 'smooth'})
 	}
+	$(document).ready(function(){
+		$('.menu-toggle').click(function(){
+			$('nav').toggleClass('active')
+		})
+	})
+
+
+
+	let el = null;
+let wrapper = null;
+let currentX = 0;
+let currentY = 0;
+let rorateX = 0;
+let rotateY = 0;
+let opened = false;
+
+function Cube(selector) {
+    el = document.querySelector(element);
+    _initData();
+    _initEvents();
+}
+function _initData() {
+    wrapper = el.parentNode;
+    el.style.transform = 'translate3d(0, 0, 0) rotateX(-200deg) rotateY(45deg)'
+}
+
+function _initEvents() {
+    el.addEventListener('mousedown', (event) => {
+        event.preventDefault();
+        currentX = event.clientX;
+        currentY = event.clientY;
+        rotateX = Number(el.style.transform.match(/rotateX\((-?[0-9]+(\.[0-9])?)*deg\)/)[1]);
+        rotateY = Number(el.style.transform.match(/rotateY\((-?[0-9]+(\.[0-9])?)*deg\)/)[1]);
+        
+        document.addEventListener('mousemove', drag);
+    	document.addEventListener('mouseup', release)
+    });
+    e.addEventListener('dblclick', open);
+}
+function drag(event) {
+    let draggedX = (event.clientX - currentX);
+    let draggedY = (event.clientY - currentY);
+    
+    
+// check if the left mouse button is clicked
+
+    if(event.buttons !== 1) return;
+    el.style.transform = `rotateX(${rotateX - (draggedY / 2)}deg) rotateY(${rotateY + (draggedX / 2)}deg)`;
+}
+function release(event) {
+    document.removeEventListener('mousemove', drag);
+    document.removeEventListener('mouseup', release);
+}
 
 </script>
 </body>
