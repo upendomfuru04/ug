@@ -208,7 +208,7 @@ input[type=submit]:hover {
 
 .card {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  max-width: 200px;
+  max-width: 220px;
   margin: auto;
   text-align: center;
   font-family: arial;
@@ -288,18 +288,43 @@ input[type=submit]:hover {
       transition: all 1.5s ease;
 
      }
-
-     @media only screen and (max-width:1150px){
+    @media only screen and (max-width: 1150px){
       header .navbar-brand{
         padding-left: 1rem;
       }
+      .section-2 .cover{
+        background-position: -25vmin -10vmin;
+      }
+      .numbers .rect{
+        width: 10rem;
+        height: 8rem;
+      }
+      .numbers .rect h1{
+        font-size:2rem;
+      }
+      .section-4 .carousel-item{
+        padding-left: 0.6rem;
+      }
+      .section-4 .team{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      .section-4 .carousel-inner{
+        width:24rem; 
+      }
+   
      }
-     @media only screen and (max-width: 990px){
+     @media only screen and (max-width: 1000px){
       footer .row .col-md-2{
         margin-top: 8vmin;
       }
      }
-
+      @media only screen and (max-width: 990px){
+        .section-4 .card{
+          width: 18rem;
+        }
+      }
 
 
   </style>
@@ -341,6 +366,9 @@ input[type=submit]:hover {
 </nav>
 
 </div>
+
+
+
 
  </header>
 
@@ -469,7 +497,7 @@ input[type=submit]:hover {
 </div>
 
 
-<div class="card">
+ <div class="card">
   <img src="pg.png" style="width:100%">
   <h4>Why I Hate Being An EMPLOYEE</h4>
   <p class="price">50,000</p>
@@ -481,10 +509,10 @@ input[type=submit]:hover {
         <i class="fa fa-star" aria-hidden="true"></i>
       </div>
   <p>Sold by <span style="color: #d6bd60"> Gaston Ngailo.</span></p>
-  <p><button>Add To Cart</button></p> 
+ <p><button>Add To Cart</button></p> 
   <p><button style="background-color:black;">Buy Now</button></p>
 
-
+</div>
  <br>
 <br>
 
