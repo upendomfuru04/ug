@@ -82,72 +82,7 @@
     }
 
 
-    .container {
-  position: relative;
-  width: 100%;
-}
-
-.image {
-  display: block;
-  width: 100%;
-  height: auto;
-}
-
-.overlay {
-  position: absolute;
-  bottom: 0;
-  left: 100%;
-  right: 0;
-  background-color: #d6bd60;
-  overflow: hidden;
-  width: 0;
-  height: 100%;
-  transition: .5s ease;
-}
-
-.container:hover .overlay {
-  width: 100%;
-  left: 0;
-}
-
-.text {
-  white-space: nowrap; 
-  color: white;
-  font-size: 20px;
-  position: absolute;
-  overflow: hidden;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-}
-
-div.a {
-  text-align:left;
-  padding-left: 28px;
-}
-
-
-.a img {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  
-}
-
-.a h2{
-	text-align: center;
-	color: #d6bd60;
-}
-
-.a .b{
-	 background: rgba(0,0,0,0.8);
-	  overflow-x: hidden;
-      padding: 14vmin 18vmin;
-    
-}
-
-
+   
 form {
   border: 3px solid #f1f1f1;
   font-family: Arial;
@@ -204,6 +139,11 @@ input[type=submit]:hover {
   background-color: #d6bd60;
   color: white;
 }
+.crd{
+   display: flex;
+  flex-wrap: wrap;
+  padding-top: 12px;
+}
 
 .card {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
@@ -211,7 +151,9 @@ input[type=submit]:hover {
   margin: auto;
   text-align: center;
   font-family: arial;
-  display:inline-grid;
+  display: flex;
+  flex-wrap: wrap;
+  flex-basis: 100%;
 }
 .card h4{
   text-align: left;
@@ -291,32 +233,13 @@ input[type=submit]:hover {
       header .navbar-brand{
         padding-left: 1rem;
       }
-      .section-2 .cover{
-        background-position: -25vmin -10vmin;
-      }
-      .numbers .rect{
-        width: 10rem;
-        height: 8rem;
-      }
-      .numbers .rect h1{
-        font-size:2rem;
-      }
-      .section-4 .carousel-item{
-        padding-left: 0.6rem;
-      }
-      .section-4 .team{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-      }
-      .section-4 .carousel-inner{
-        width:24rem; 
-      }
-   
      }
      @media only screen and (max-width: 1000px){
       footer .row .col-md-2{
         margin-top: 8vmin;
+      }
+      .card{
+        flex: 2 46%;
       }
      }
       @media only screen and (max-width: 990px){
@@ -369,9 +292,8 @@ input[type=submit]:hover {
 
 
  </header>
+<section class="crd">
 
-
-<div style="padding-left: 23px;">
 <div class="card">
   <img src="pg.png"style="width:100%">
   <h4 >Why I Hate Being An EMPLOYEE</h4>
@@ -406,7 +328,7 @@ input[type=submit]:hover {
 <br>
 <br>
 
-<div class="card">
+<div class="card p-2">
   <img src="pg.png" style="width:100%">
   <h4>Why I Hate Being An EMPLOYEE</h4>
   <p class="price">$19.99</p>
@@ -421,8 +343,9 @@ input[type=submit]:hover {
   <p><button>Add To Cart</button></p> 
   <p><button style="background-color:black;">Buy Now</button></p>
 </div>
-
-<div class="card">
+<br>
+<br>
+<div class="card p-2">
   <img src="pg.png" style="width:100%">
   <h4>Why I Hate Being An EMPLOYEE</h4>
   <p class="price">50,000</p>
@@ -441,8 +364,8 @@ input[type=submit]:hover {
 <br>
 <br>
 
-<div class="card">
-  <img src="pg.png" alt="Denim Jeans" style="width:100%">
+<div class="card p-2">
+  <img src="pg.png" style="width:100%">
  <h4>Why I Hate Being An EMPLOYEE</h4>
   <p class="price">50,000</p>
   <div style="color:#e4e6ec;" class="star">
@@ -457,8 +380,9 @@ input[type=submit]:hover {
   <p><button style="background-color:black;">Buy Now</button></p> 
 
 </div>
-
-<div class="card">
+<br>
+<br>
+<div class="card p-2">
   <img src="pg.png" style="width:100%">
   <h4>Why I Hate Being An EMPLOYEE</h4>
   <p class="price">50,000</p>
@@ -493,7 +417,8 @@ input[type=submit]:hover {
   <p><button style="background-color:black;">Buy Now</button></p>
 
 </div>
-
+<br>
+<br>
 
  <div class="card">
   <img src="pg.png" style="width:100%">
@@ -531,7 +456,8 @@ input[type=submit]:hover {
 
 </div>
 
-
+<br>
+<br>
 <div class="card">
   <img src="pg.png" style="width:100%">
   <h4>Why I Hate Being An EMPLOYEE</h4>
@@ -548,10 +474,9 @@ input[type=submit]:hover {
   <p><button style="background-color:black;">Buy Now</button></p>
 
 </div>
-</div>
 <br>
 <br>
-
+</section>
 
 
 
