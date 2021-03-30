@@ -17,7 +17,31 @@
     body {
       font-family: Arial, Helvetica, sans-serif;
     }
-
+#back2Top {
+    width: 40px;
+    line-height: 40px;
+    overflow: hidden;
+    z-index: 999;
+    display: none;
+    cursor: pointer;
+    -moz-transform: rotate(270deg);
+    -webkit-transform: rotate(270deg);
+    -o-transform: rotate(270deg);
+    -ms-transform: rotate(270deg);
+    transform: rotate(270deg);
+    position: fixed;
+    bottom: 50px;
+    right: 0;
+    background-color: #DDD;
+    color: #555;
+    text-align: center;
+    font-size: 30px;
+    text-decoration: none;
+}
+#back2Top:hover {
+    background-color: #DDF;
+    color: #000;
+}
     header,
     section{
       overflow-x: hidden;
@@ -88,11 +112,6 @@
     header .container .col-md-7 p{
       padding: 1vmin 5vmin;
     }
-
-    
-     p{
-      font-size: 30px;
-     }
     .header-extradiv{
        width: 100%;
        height: auto;
@@ -285,7 +304,7 @@ input[type=submit]:hover {
 
 
   </style>
-
+<a id="back2Top" title="Back to top" href="#">&#10148;</a>
   
  <header>	
   
@@ -565,7 +584,24 @@ LaunchCon is my once-a-year event where we teach the latest cutting edge strateg
    </div>
  </footer>
 
+<script>
+  $(window).scroll(function() {
+    var height = $(window).scrollTop();
+    if (height > 100) {
+        $('#back2Top').fadeIn();
+    } else {
+        $('#back2Top').fadeOut();
+    }
+});
+$(document).ready(function() {
+    $("#back2Top").click(function(event) {
+        event.preventDefault();
+        $("html, body").animate({ scrollTop: 0 }, "slow");
+        return false;
+    });
 
+});
+</script>
 
  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.6.0/dist/umd/popper.min.js" integrity="sha384-KsvD1yqQ1/1+IA7gi3P0tyJcT3vR+NdBTt13hSJ2lnve8agRGXTTyNaBYmCR/Nwi" crossorigin="anonymous"></script>
